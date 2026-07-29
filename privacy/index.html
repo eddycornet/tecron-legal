@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Tecron</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+         font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.2rem; }
+  .meta { opacity: .7; font-size: .9rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid; border-color: color-mix(in srgb, currentColor 25%, transparent);
+           padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  code { font-size: .9em; }
+  a { color: inherit; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+  .note { border-left: 3px solid; border-color: color-mix(in srgb, currentColor 40%, transparent);
+          padding: .5rem .9rem; margin: 1rem 0; opacity: .95; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="meta">Operated by <strong>Tecron</strong> · Last updated: 27 July 2026</p>
+
+<div class="note">
+This policy explains how we handle your personal data, including the bank account
+information you choose to connect. We designed this Service for personal and
+household budgeting; we never sell your data, and we never initiate payments.
+</div>
+
+<h2>1. Who we are (Data Controller)</h2>
+<p>
+The Service available at <strong>tecron.be</strong> (the “Service”) is operated by
+<strong>Tecron</strong>, a business established in Belgium
+(company / VAT number: <code>BE0833267216</code>; registered address:
+<code>2590 Berlaar</code>). Tecron is the “data controller” for the personal
+data described here.
+</p>
+<p>For any privacy question or to exercise your rights, contact us at
+<a href="mailto:privacy@tecron.be">privacy@tecron.be</a>.</p>
+
+<h2>2. What data we collect</h2>
+<table>
+  <tr><th>Category</th><th>Examples</th></tr>
+  <tr><td>Account &amp; authentication</td><td>Email address, hashed password, phone number, two-factor-authentication (2FA) secret (encrypted), API-key hash.</td></tr>
+  <tr><td>Bank account data (via Enable Banking)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
+  <tr><td>Imported statements</td><td>Transaction data from CSV files you upload (e.g. KBC exports).</td></tr>
+  <tr><td>Budget data</td><td>The budgets, categories and classifications you create.</td></tr>
+  <tr><td>Technical &amp; usage</td><td>Log data needed to operate and secure the Service (e.g. timestamps, error and access logs, rate-limiting counters).</td></tr>
+</table>
+
+<h2>3. How and why we use your data (legal bases)</h2>
+<table>
+  <tr><th>Purpose</th><th>Legal basis (GDPR Art. 6)</th></tr>
+  <tr><td>Provide the budgeting features you request</td><td>Performance of a contract</td></tr>
+  <tr><td>Access your bank account information</td><td>Your explicit consent (and PSD2 account-information access)</td></tr>
+  <tr><td>Automatically categorise transactions</td><td>Performance of a contract; see “Automated classification” below</td></tr>
+  <tr><td>Authenticate you and secure the Service</td><td>Legitimate interest; legal obligation</td></tr>
+  <tr><td>Process subscription payments (if applicable)</td><td>Performance of a contract</td></tr>
+</table>
+
+<h2>4. Bank account access (PSD2 / Account Information Service)</h2>
+<p>
+When you connect a bank account, you are authorising <strong>read-only</strong> access to
+your account information through <strong>Enable Banking</strong>, a licensed Account
+Information Service Provider (AISP), under the EU’s PSD2 framework. Key points:
+</p>
+<ul>
+  <li>Access is granted by your explicit consent, given directly to your bank via its
+      secure authentication (Strong Customer Authentication).</li>
+  <li>Consent is time-limited (typically up to ~180 days) and you can
+      <strong>withdraw it at any time</strong> — from within the Service (disconnect) or
+      directly with your bank.</li>
+  <li>We only <strong>read</strong> balances and transactions. We <strong>cannot and do
+      not initiate payments</strong> or move money.</li>
+</ul>
+
+<h2>5. Automated classification (transaction text sent to Anthropic)</h2>
+<p>
+To suggest budget categories, the <strong>text of your transactions</strong> (such as the
+description, merchant and counterparty name) may be sent to <strong>Anthropic</strong>
+(the provider of the “Claude” AI model) for classification. This processing produces a
+suggested category only; it is not used to make decisions with legal or similarly
+significant effects about you. We do not send your name, login credentials or full
+account numbers for this purpose beyond what appears in the transaction text itself.
+</p>
+
+<h2>6. Who we share data with (processors)</h2>
+<p>We do not sell your personal data. We share it only with service providers that process
+it on our behalf, under contract, to run the Service:</p>
+<table>
+  <tr><th>Provider</th><th>Purpose</th></tr>
+  <tr><td>Enable Banking</td><td>Connecting to your bank and retrieving account information (AISP)</td></tr>
+  <tr><td>Anthropic</td><td>AI-based transaction categorisation (see section 5)</td></tr>
+  <tr><td>Stripe</td><td>Subscription billing and payment processing (if you subscribe)</td></tr>
+  <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications)</td></tr>
+  <tr><td>Twilio</td><td>Sending 2FA codes by SMS</td></tr>
+  <tr><td>DigitalOcean</td><td>Cloud hosting infrastructure</td></tr>
+</table>
+<p>
+Some of these providers (e.g. Anthropic, Stripe, Twilio) may process data outside the
+European Economic Area. Where that happens, transfers are protected by appropriate
+safeguards such as the European Commission’s Standard Contractual Clauses.
+</p>
+
+<h2>7. How long we keep your data</h2>
+<p>
+We keep your account and financial data for as long as your account is active. If you
+close your account, we delete or anonymise your personal data within a reasonable period,
+except where we must retain certain records to comply with legal obligations. Temporary
+data (such as 2FA codes) is auto-expired within minutes.
+</p>
+
+<h2>8. How we protect your data</h2>
+<ul>
+  <li>Sensitive secrets (such as 2FA secrets and bank-consent tokens) are encrypted at rest
+      (AES-256); passwords are stored only as salted hashes.</li>
+  <li>Access is protected by authentication, two-factor authentication and rate limiting.</li>
+  <li>Application infrastructure is private and not exposed to the public internet beyond
+      what is strictly necessary to operate the Service.</li>
+</ul>
+
+<h2>9. Your rights</h2>
+<p>Under the GDPR you have the right to: access your data; correct it; erase it; restrict or
+object to processing; data portability; and to <strong>withdraw consent</strong> at any time
+(which does not affect processing already carried out). To exercise any of these, email
+<a href="mailto:privacy@tecron.be">privacy@tecron.be</a>.</p>
+<p>
+You also have the right to lodge a complaint with the Belgian Data Protection Authority
+(Gegevensbeschermingsautoriteit / Autorité de protection des données),
+<a href="https://www.dataprotectionauthority.be">dataprotectionauthority.be</a>.
+</p>
+
+<h2>10. Cookies and local storage</h2>
+<p>
+We use only the storage strictly necessary to operate the Service (for example, keeping you
+signed in and remembering your language preference). We do not use third-party advertising
+or tracking cookies.
+</p>
+
+<h2>11. Children</h2>
+<p>The Service is not intended for children under 16, and we do not knowingly collect their data.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy from time to time. Material changes will be reflected by updating
+the “Last updated” date above and, where appropriate, by notifying you.</p>
+
+<h2>13. Contact</h2>
+<p>Tecron — <a href="mailto:privacy@tecron.be">privacy@tecron.be</a></p>
+
+<footer>
+  <a href="/terms">Terms of Service</a> · <a href="/">Home</a>
+</footer>
+</body>
+</html>
