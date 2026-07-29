@@ -8,9 +8,9 @@ the app footer) point at:
 - `https://legal.tecron.be/privacy`
 - `https://legal.tecron.be/terms`
 
-## DNS at Telenet — one CNAME record
+## DNS (hosted by Google) — one CNAME record
 
-At `cloud.telenet.be`, add a single **CNAME** record:
+In the Google DNS console for `tecron.be`, add a single **CNAME** record:
 
 ```
 Host / name:  legal          (i.e. legal.tecron.be)
@@ -42,8 +42,8 @@ certificate has been issued).
 The two HTML files (`privacy/index.html`, `terms/index.html`) hold the text.
 Placeholders have been filled (VAT `BE0833267216`, `2590 Berlaar`, court
 `Mechelen`). Make sure the **admin@tecron.be** mailbox actually exists / routes
-at Telenet, or privacy requests will bounce. Update the "Last updated" date on any
-material change.
+(wherever tecron.be email is hosted), or privacy requests will bounce. Update the
+"Last updated" date on any material change.
 
 ---
 
