@@ -41,7 +41,7 @@ certificate has been issued).
 
 The two HTML files (`privacy/index.html`, `terms/index.html`) hold the text.
 Placeholders have been filled (VAT `BE0833267216`, `2590 Berlaar`, court
-`Mechelen`). Make sure the **privacy@tecron.be** mailbox actually exists / routes
+`Mechelen`). Make sure the **admin@tecron.be** mailbox actually exists / routes
 at Telenet, or privacy requests will bounce. Update the "Last updated" date on any
 material change.
 
