@@ -23,7 +23,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="meta">Operated by <strong>Tecron</strong> · Last updated: 27 July 2026</p>
+<p class="meta">Operated by <strong>Tecron</strong> · Last updated: 17 September 2026</p>
 
 <div class="note">
 This policy explains how we handle your personal data, including the bank account
@@ -46,7 +46,7 @@ data described here.
 <table>
   <tr><th>Category</th><th>Examples</th></tr>
   <tr><td>Account &amp; authentication</td><td>Email address, hashed password, phone number, two-factor-authentication (2FA) secret (encrypted), API-key hash.</td></tr>
-  <tr><td>Bank account data (via Enable Banking)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
+  <tr><td>Bank account data (via Enable Banking, or via open-banking.io if you choose it)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
   <tr><td>Imported statements</td><td>Transaction data from CSV files you upload (e.g. KBC exports).</td></tr>
   <tr><td>Budget data</td><td>The budgets, categories and classifications you create.</td></tr>
   <tr><td>Technical &amp; usage</td><td>Log data needed to operate and secure the Service (e.g. timestamps, error and access logs, rate-limiting counters).</td></tr>
@@ -77,6 +77,17 @@ Information Service Provider (AISP), under the EU’s PSD2 framework. Key points
   <li>We only <strong>read</strong> balances and transactions. We <strong>cannot and do
       not initiate payments</strong> or move money.</li>
 </ul>
+<p>
+<strong>Connecting through open-banking.io (optional).</strong> Instead of connecting your
+bank directly, you can use your own account at <strong>open-banking.io</strong>, operated by
+<strong>Tatic ApS</strong> (Denmark), which provides account information under the licence of
+Enable Banking. In that case you give your bank consent in open-banking.io’s app, and you
+upload to the Service a credentials file you export from open-banking.io. That file contains
+a key that decrypts your account data: we store it <strong>encrypted</strong>, use it only to
+read your balances and transactions, and delete it when you disconnect. Your relationship with
+open-banking.io (including its fees and its own privacy policy) is between you and
+open-banking.io; to fully withdraw access, also remove the connection in open-banking.io’s app.
+</p>
 
 <h2>5. Automated classification (transaction text sent to Anthropic)</h2>
 <p>
@@ -94,6 +105,7 @@ it on our behalf, under contract, to run the Service:</p>
 <table>
   <tr><th>Provider</th><th>Purpose</th></tr>
   <tr><td>Enable Banking</td><td>Connecting to your bank and retrieving account information (AISP)</td></tr>
+  <tr><td>Tatic ApS (open-banking.io)</td><td>Retrieving your account information when you choose to connect through open-banking.io (see section 4); data processed in the EU</td></tr>
   <tr><td>Anthropic</td><td>AI-based transaction categorisation (see section 5)</td></tr>
   <tr><td>Stripe</td><td>Subscription billing and payment processing (if you subscribe)</td></tr>
   <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications)</td></tr>
