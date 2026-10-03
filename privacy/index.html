@@ -10,6 +10,7 @@
          font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   h1 { font-size: 1.9rem; margin-bottom: .25rem; }
   h2 { font-size: 1.2rem; margin-top: 2.2rem; }
+  h3 { font-size: 1.02rem; margin-top: 1.6rem; }
   .meta { opacity: .7; font-size: .9rem; }
   table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
   th, td { border: 1px solid; border-color: color-mix(in srgb, currentColor 25%, transparent);
@@ -23,7 +24,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="meta">Operated by <strong>Tecron</strong> · Last updated: 19 September 2026</p>
+<p class="meta">Operated by <strong>Tecron</strong> · Version <code>2026-10-03</code> · Last updated: 3 October 2026</p>
 
 <div class="note">
 This policy explains how we handle your personal data, including the bank account
@@ -49,6 +50,7 @@ data described here.
   <tr><td>Bank account data (via Enable Banking, or via open-banking.io if you choose it)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
   <tr><td>Imported statements</td><td>Transaction data from CSV files you upload (e.g. KBC exports).</td></tr>
   <tr><td>Budget data</td><td>The budgets, categories and classifications you create.</td></tr>
+  <tr><td>Billing</td><td>Your billing name and address, and — for business customers — your VAT number, collected by Stripe when you subscribe so that we can issue a valid invoice and apply the correct VAT. We see the invoice and the last four digits of your card; <strong>we never receive your full card details</strong>.</td></tr>
   <tr><td>Technical &amp; usage</td><td>Log data needed to operate and secure the Service (e.g. timestamps, error and access logs, rate-limiting counters).</td></tr>
 </table>
 
@@ -59,7 +61,7 @@ data described here.
   <tr><td>Access your bank account information</td><td>Your explicit consent (and PSD2 account-information access)</td></tr>
   <tr><td>Automatically categorise transactions</td><td>Performance of a contract; see “Automated classification” below</td></tr>
   <tr><td>Authenticate you and secure the Service</td><td>Legitimate interest; legal obligation</td></tr>
-  <tr><td>Process subscription payments (if applicable)</td><td>Performance of a contract</td></tr>
+  <tr><td>Process subscription payments and issue invoices</td><td>Performance of a contract</td></tr>
 </table>
 
 <h2>4. Bank account access (PSD2 / Account Information Service)</h2>
@@ -107,7 +109,7 @@ it on our behalf, under contract, to run the Service:</p>
   <tr><td>Enable Banking</td><td>Connecting to your bank and retrieving account information (AISP)</td></tr>
   <tr><td>Tatic ApS (open-banking.io)</td><td>Retrieving your account information when you choose to connect through open-banking.io (see section 4); data processed in the EU</td></tr>
   <tr><td>Anthropic</td><td>AI-based transaction categorisation (see section 5)</td></tr>
-  <tr><td>Stripe</td><td>Subscription billing and payment processing (if you subscribe)</td></tr>
+  <tr><td>Stripe</td><td>Subscription billing, payment processing, invoicing and VAT determination. Stripe also acts as an independent controller for its own fraud-prevention and regulatory purposes.</td></tr>
   <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications)</td></tr>
   <tr><td>Twilio</td><td>Sending 2FA codes by SMS</td></tr>
   <tr><td>DigitalOcean</td><td>Cloud hosting infrastructure</td></tr>
@@ -121,9 +123,16 @@ safeguards such as the European Commission’s Standard Contractual Clauses.
 <h2>7. How long we keep your data</h2>
 <p>
 We keep your account and financial data for as long as your account is active. If you
-close your account, we delete or anonymise your personal data within a reasonable period,
-except where we must retain certain records to comply with legal obligations. Temporary
-data (such as 2FA codes) is auto-expired within minutes.
+close your account, we delete or anonymise your personal data within a reasonable period.
+Temporary data (such as 2FA codes) is auto-expired within minutes.
+</p>
+<p>
+<strong>Invoices are the exception.</strong> Belgian law requires us to keep accounting
+records, including invoices and the billing details on them, for <strong>seven years</strong>.
+Those are retained for that period even after you close your account, and are not deleted on
+request — the legal basis is our legal obligation, not your consent. Nothing else about your
+account is kept under that exception: your transactions, budgets and classifications are
+deleted or anonymised with the rest.
 </p>
 
 <h2>8. How we protect your data</h2>
