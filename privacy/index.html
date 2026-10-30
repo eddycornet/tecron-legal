@@ -47,7 +47,7 @@ data described here.
 <table>
   <tr><th>Category</th><th>Examples</th></tr>
   <tr><td>Account &amp; authentication</td><td>Email address, hashed password, phone number, two-factor-authentication (2FA) secret (encrypted), API-key hash.</td></tr>
-  <tr><td>Bank account data (via open-banking.io, or directly via Enable Banking)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
+  <tr><td>Bank account data (via open-banking.io)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
   <tr><td>Imported statements</td><td>Transaction data from CSV files you upload (e.g. KBC exports).</td></tr>
   <tr><td>Budget data</td><td>The budgets, categories and classifications you create.</td></tr>
   <tr><td>Billing</td><td>Your billing name and address, and — for business customers — your VAT number, collected by Stripe when you subscribe so that we can issue a valid invoice and apply the correct VAT. We see the invoice and the last four digits of your card; <strong>we never receive your full card details</strong>.</td></tr>
@@ -68,9 +68,8 @@ data described here.
 <p>
 When you connect a bank account, you are authorising <strong>read-only</strong> access to
 your account information through a licensed <strong>Account Information Service Provider</strong>
-(AISP), under the EU’s PSD2 framework. The Service supports two routes — through your own
-open-banking.io account, or directly through <strong>Enable Banking</strong> — and which of them
-is available to you is shown in the Service when you add a connection. Key points:
+(AISP), under the EU’s PSD2 framework. That access runs through your own account with
+<strong>open-banking.io</strong> (see below); Tecron is not itself an AISP. Key points:
 </p>
 <ul>
   <li>Access is granted by your explicit consent, given directly to your bank via its
@@ -82,10 +81,10 @@ is available to you is shown in the Service when you add a connection. Key point
       not initiate payments</strong> or move money.</li>
 </ul>
 <p>
-<strong>Connecting through open-banking.io.</strong> On this route you use your own account
-at <strong>open-banking.io</strong>, operated by
+<strong>How the connection works.</strong> You use your own account at
+<strong>open-banking.io</strong>, operated by
 <strong>Tatic ApS</strong> (Denmark), which provides account information under the licence of
-Enable Banking. In that case you give your bank consent in open-banking.io’s app, and you
+Enable Banking. You give your bank consent in open-banking.io’s app, and you
 upload to the Service a credentials file you export from open-banking.io. That file contains
 a key that decrypts your account data: we store it <strong>encrypted</strong>, use it only to
 read your balances and transactions, and delete it when you disconnect. Your relationship with
@@ -108,8 +107,7 @@ account numbers for this purpose beyond what appears in the transaction text its
 it on our behalf, under contract, to run the Service:</p>
 <table>
   <tr><th>Provider</th><th>Purpose</th></tr>
-  <tr><td>Enable Banking</td><td>Connecting to your bank and retrieving account information (AISP)</td></tr>
-  <tr><td>Tatic ApS (open-banking.io)</td><td>Retrieving your account information when you choose to connect through open-banking.io (see section 4); data processed in the EU</td></tr>
+  <tr><td>Tatic ApS (open-banking.io)</td><td>Retrieving your account information when you connect a bank account (see section 4); data processed in the EU</td></tr>
   <tr><td>Anthropic</td><td>AI-based transaction categorisation (see section 5)</td></tr>
   <tr><td>Stripe</td><td>Subscription billing, payment processing, invoicing and VAT determination. Stripe also acts as an independent controller for its own fraud-prevention and regulatory purposes.</td></tr>
   <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications)</td></tr>
