@@ -24,7 +24,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="meta">Operated by <strong>Tecron</strong> · Version <code>2026-10-03</code> · Last updated: 30 October 2026</p>
+<p class="meta">Operated by <strong>Tecron</strong> · Version <code>2026-11-11</code> · Last updated: 11 November 2026</p>
 
 <div class="note">
 This policy explains how we handle your personal data, including the bank account
@@ -59,7 +59,8 @@ data described here.
   <tr><th>Purpose</th><th>Legal basis (GDPR Art. 6)</th></tr>
   <tr><td>Provide the budgeting features you request</td><td>Performance of a contract</td></tr>
   <tr><td>Access your bank account information</td><td>Your explicit consent (and PSD2 account-information access)</td></tr>
-  <tr><td>Automatically categorise transactions</td><td>Performance of a contract; see “Automated classification” below</td></tr>
+  <tr><td>Categorise transactions with rules you set</td><td>Performance of a contract</td></tr>
+  <tr><td>Categorise transactions with AI, if you turn it on</td><td>Your consent, which you can withdraw at any time in Settings; see “Automated classification” below</td></tr>
   <tr><td>Authenticate you and secure the Service</td><td>Legitimate interest; legal obligation</td></tr>
   <tr><td>Process subscription payments and issue invoices</td><td>Performance of a contract</td></tr>
 </table>
@@ -92,14 +93,23 @@ open-banking.io (including its fees and its own privacy policy) is between you a
 open-banking.io; to fully withdraw access, also remove the connection in open-banking.io’s app.
 </p>
 
-<h2>5. Automated classification (transaction text sent to Anthropic)</h2>
+<h2>5. Automated classification (AI — only if you turn it on)</h2>
 <p>
-To suggest budget categories, the <strong>text of your transactions</strong> (such as the
-description, merchant and counterparty name) may be sent to <strong>Anthropic</strong>
-(the provider of the “Claude” AI model) for classification. This processing produces a
-suggested category only; it is not used to make decisions with legal or similarly
-significant effects about you. We do not send your name, login credentials or full
-account numbers for this purpose beyond what appears in the transaction text itself.
+AI classification is <strong>off unless you switch it on</strong>. We ask once after you
+sign in, and you can change your answer at any time in <em>Settings → AI classification</em>.
+Without it, the rules you set keep categorising your transactions as usual.
+</p>
+<p>
+When it is on, transactions that none of your rules recognise are sent to
+<strong>Anthropic</strong> (the provider of the “Claude” AI model) to suggest a category: the
+description, amount, date, transaction type, merchant and counterparty name. <strong>Account
+and card numbers are removed before sending</strong> — also where they appear inside the
+description text — and we do not send your name or login details. If you use the budget
+questionnaire, your answers to it are sent the same way to draft a first budget.
+</p>
+<p>
+This produces a suggestion only, which you can accept or change; it is not used to make
+decisions with legal or similarly significant effects about you.
 </p>
 
 <h2>6. Who we share data with (processors)</h2>
@@ -139,10 +149,26 @@ deleted or anonymised with the rest.
 <ul>
   <li>Sensitive secrets (such as 2FA secrets and bank-consent tokens) are encrypted at rest
       (AES-256); passwords are stored only as salted hashes.</li>
+  <li>Backups are <strong>encrypted</strong> before they leave the server, with a key that is
+      kept offline and is not stored on the server itself.</li>
   <li>Access is protected by authentication, two-factor authentication and rate limiting.</li>
   <li>Application infrastructure is private and not exposed to the public internet beyond
       what is strictly necessary to operate the Service.</li>
 </ul>
+
+<h2>8a. What Tecron can see</h2>
+<p>
+Your data is stored on our servers in a form the Service can read, because it has to: it
+imports your transactions, applies your rules and calculates your budget for you. That
+means that, as the operator, we have <strong>technical access</strong> to the data you store.
+We use that access only to operate and secure the Service and to help you when you ask us
+to. We do not browse your data, and we never sell it.
+</p>
+<p>
+Tecron does not use end-to-end encryption. If that matters to you, tell us at
+<a href="mailto:admin@tecron.be">admin@tecron.be</a> — it is something we would consider if
+there is demand for it.
+</p>
 
 <h2>9. Your rights</h2>
 <p>Under the GDPR you have the right to: access your data; correct it; erase it; restrict or
