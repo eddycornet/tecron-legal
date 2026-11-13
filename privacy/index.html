@@ -24,7 +24,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="meta">Operated by <strong>Tecron</strong> · Version <code>2026-11-11</code> · Last updated: 11 November 2026</p>
+<p class="meta">Operated by <strong>Tecron</strong> · Version <code>2026-11-13</code> · Last updated: 13 November 2026</p>
 
 <div class="note">
 This policy explains how we handle your personal data, including the bank account
@@ -50,6 +50,7 @@ data described here.
   <tr><td>Bank account data (via open-banking.io)</td><td>Account identifiers (IBAN), balances, and transactions (amount, date, description, counterparty name/IBAN, merchant) — read-only, for the accounts you choose to link.</td></tr>
   <tr><td>Imported statements</td><td>Transaction data from CSV files you upload (e.g. KBC exports).</td></tr>
   <tr><td>Budget data</td><td>The budgets, categories and classifications you create.</td></tr>
+  <tr><td>Co-parent claims (only if you use them)</td><td>The other parent’s name, email address and language; your children’s first names; the expenses you record and their receipts, which can include medical information; the claims you send and the other parent’s answers. See section 5a.</td></tr>
   <tr><td>Billing</td><td>Your billing name and address, and — for business customers — your VAT number, collected by Stripe when you subscribe so that we can issue a valid invoice and apply the correct VAT. We see the invoice and the last four digits of your card; <strong>we never receive your full card details</strong>.</td></tr>
   <tr><td>Technical &amp; usage</td><td>Log data needed to operate and secure the Service (e.g. timestamps, error and access logs, rate-limiting counters).</td></tr>
 </table>
@@ -61,6 +62,8 @@ data described here.
   <tr><td>Access your bank account information</td><td>Your explicit consent (and PSD2 account-information access)</td></tr>
   <tr><td>Categorise transactions with rules you set</td><td>Performance of a contract</td></tr>
   <tr><td>Categorise transactions with AI, if you turn it on</td><td>Your consent, which you can withdraw at any time in Settings; see “Automated classification” below</td></tr>
+  <tr><td>Co-parent claims: the expenses and receipts you record and send</td><td>Performance of a contract; for receipts that contain health data, Art. 9(2)(f) GDPR (establishing or exercising a legal claim); see section 5a</td></tr>
+  <tr><td>Co-parent claims: the other parent’s contact details and answers</td><td>Legitimate interest — settling the children’s costs the two parents share; see section 5a</td></tr>
   <tr><td>Authenticate you and secure the Service</td><td>Legitimate interest; legal obligation</td></tr>
   <tr><td>Process subscription payments and issue invoices</td><td>Performance of a contract</td></tr>
 </table>
@@ -112,6 +115,48 @@ This produces a suggestion only, which you can accept or change; it is not used 
 decisions with legal or similarly significant effects about you.
 </p>
 
+<h2>5a. Co-parent claims (optional pack)</h2>
+<p>
+With the co-parent pack, a parent (the “claimant”) records the children’s extraordinary
+expenses — such as medical, school or activity costs — and asks the other parent for their
+share, as agreed between them or set by a court. Tecron records what the parents send and
+answer; it does not decide what counts as an extraordinary expense and gives no legal advice.
+</p>
+<p><strong>What is processed.</strong></p>
+<ul>
+  <li><strong>About the children:</strong> their first name only, and the expenses recorded for
+      them. Receipts can contain <strong>health information</strong> (for example a
+      prescription or a hospital invoice), which is a special category of personal data.</li>
+  <li><strong>About the other parent:</strong> the name, email address and language the
+      claimant enters; when they open a claim; and their answers (accepted, disputed, paid)
+      and messages, each with its date and time.</li>
+  <li><strong>About the claimant:</strong> the expenses, receipts, claims and messages they
+      create, as part of their account.</li>
+</ul>
+<p><strong>Why, and on what basis.</strong> The pack exists so a parent can settle a cost the
+law shares between both parents (Article 203bis of the Belgian Civil Code). Receipts with health
+information are processed because they are needed to establish or exercise that claim
+(Art. 9(2)(f) GDPR). The other parent’s details are processed in the legitimate interest of
+both parents in settling those costs, and are used for nothing else.</p>
+<p><strong>What the other parent sees.</strong> They do not need an account. Each claim is sent
+as a personal link that opens <strong>that claim only</strong> — its expenses, receipts and
+history — and nothing else of the claimant’s finances. A link works for 60 days and the
+claimant can revoke it. The emails we send contain only names, the period, the amount, the
+due date and any message one parent writes to the other: <strong>never a receipt or a
+description of an expense</strong>. The other parent gets
+at most one reminder; not answering is never treated as agreement.</p>
+<p><strong>How it is protected.</strong> Receipts are encrypted (AES-256) before they are
+stored. Co-parent data is <strong>never sent to the AI provider</strong>, whether or not AI
+classification is on.</p>
+<p><strong>How long it is kept.</strong> As long as the claimant keeps it. Expenses that have not
+been sent can be changed or deleted at any time. A sent claim is kept unchanged, because it is a
+record both parents rely on; it is deleted when the claimant removes the other parent from their
+account or closes their account. Receipts are deleted together with their expense.</p>
+<p><strong>If you are the other parent.</strong> You have the rights listed in section 9 and can
+contact us at <a href="mailto:admin@tecron.be">admin@tecron.be</a>. We will correct or delete
+your contact details on request. A claim that was already sent may be kept where it is needed
+to establish or defend a legal claim (Art. 17(3)(e) GDPR); in that case we will tell you so.</p>
+
 <h2>6. Who we share data with (processors)</h2>
 <p>We do not sell your personal data. We share it only with service providers that process
 it on our behalf, under contract, to run the Service:</p>
@@ -120,7 +165,7 @@ it on our behalf, under contract, to run the Service:</p>
   <tr><td>Tatic ApS (open-banking.io)</td><td>Retrieving your account information when you connect a bank account (see section 4); data processed in the EU</td></tr>
   <tr><td>Anthropic</td><td>AI-based transaction categorisation (see section 5)</td></tr>
   <tr><td>Stripe</td><td>Subscription billing, payment processing, invoicing and VAT determination. Stripe also acts as an independent controller for its own fraud-prevention and regulatory purposes.</td></tr>
-  <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications)</td></tr>
+  <tr><td>Resend</td><td>Sending transactional emails (e.g. verification, notifications, and co-parent claims to the other parent)</td></tr>
   <tr><td>Twilio</td><td>Sending 2FA codes by SMS</td></tr>
   <tr><td>DigitalOcean</td><td>Cloud hosting infrastructure</td></tr>
 </table>
@@ -189,7 +234,9 @@ or tracking cookies.
 </p>
 
 <h2>11. Children</h2>
-<p>The Service is not intended for children under 16, and we do not knowingly collect their data.</p>
+<p>The Service is not intended for children under 16, and they cannot have an account. The
+only information about children is what a parent enters for co-parent claims: a first name and
+the expenses made for them (see section 5a).</p>
 
 <h2>12. Changes to this policy</h2>
 <p>We may update this policy from time to time. Material changes will be reflected by updating
